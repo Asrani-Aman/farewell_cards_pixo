@@ -1,0 +1,485 @@
+body {
+  /* display: block; */
+  background-image: url("https://uploads-ssl.webflow.com/6266f459f67ef662f852a434/626730bbbcc7f1c1a60c0367_bwf-bg2x-lowB.png");
+  background-size: cover;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.container {
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  max-width: 62rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  /* height: 100vh; */
+  padding-top: 8rem;
+  padding-bottom: 0%;
+}
+.work-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  align-items: stretch;
+  /* margin-top: ; */
+}
+* {
+  box-sizing: border-box;
+}
+/* Doubt */
+/* Why my flex basisi is not working here */
+.work-item {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: clamp(467px, 90%, 1020px);
+  /* width: 958px; */
+  /* width: 90%; */
+  /* flex-basis: 958px; */
+  min-height: 478px;
+  height: auto;
+  justify-content: flex-end;
+  /* align-self: flex-end; */
+  perspective: 945px;
+  margin-bottom: 9%;
+}
+.glass-container {
+  /*as per site color ofthe border
+    border: 1px solid hsla(0,0%,100%,.15);*/
+  position: relative;
+  border: 1px solid hsla(0, 0%, 100%, 0.35);
+  border-radius: 1rem;
+  width: 80%;
+  flex: 0 1 80%;
+  min-height: 478px;
+  /* height: 100%; */
+  /* height: 478px; */
+  height: 100%;
+  z-index: 10;
+  background-color: hsla(0, 0%, 100%, 0.15);
+  backdrop-filter: blur(10px);
+  transition: all 3s ease;
+  padding-bottom: 0%;
+}
+.glass-container:hover {
+  background: linear-gradient(to bottom right, #0099ff 29%, #ffff00 100%);
+  z-index: 15;
+}
+.work-preview-wrapper img {
+  width: 100%;
+  /* backdrop-filter: blur(10px); */
+  transition: all 0.3s ease;
+  border: 1px solid hsla(0, 0%, 100%, 0.35);
+  border-top-left-radius: 0rem;
+  border-top-right-radius: 0rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  opacity: 0.5;
+  /* position: absolute; */
+}
+.work-preview-wrapper img:hover {
+  opacity: 1;
+  z-index: 15;
+}
+.work-header {
+  padding: 10px;
+  background-color: hsla(0, 0%, 100%, 0.25);
+  border-radius: 1rem;
+  border-bottom-left-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+}
+.flex {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  /* grid-column-gap: 0.5rem; */
+}
+.gflow-label.is-level {
+  display: inline-block;
+  background-color: hsla(0, 0%, 100%, 0);
+  /* background-color: rgba(0, 0, 0, 0.27); */
+  padding-right: 1px;
+  padding-left: 12px;
+  border-radius: 0.4rem;
+  /*when we place an image in glass container so we must give propety background-image:none;*/
+  font-weight: 400;
+  padding-top: 7px;
+  padding-bottom: 2px;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  z-index: 7;
+}
+.gflow-label img {
+  height: 28px;
+  width: 28px;
+  animation-name: rotate;
+  animation-duration: 4000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transition: 0.3s ease;
+}
+.button {
+  box-sizing: border-box;
+  border-radius: 1rem;
+  border: 2px solid hsla(0, 0%, 100%, 0.25);
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+  padding: 5px;
+  transition: 0.2s ease;
+}
+a.button:hover {
+  background: linear-gradient(to bottom right, #6600ff 18%, #cc9900 100%);
+  font-size: 15px !important;
+}
+/* DOUBT :- WHEN I :hover THAN CLASS.GFOW LABEL ALSO INCRESES */
+
+/* img:hover{
+    height: 38px;
+    width: 38px;
+}  */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.work-data {
+  position: absolute;
+  border: 1px solid hsla(0, 0%, 100%, 0.7);
+  border-radius: 1rem;
+  top: 50%;
+  height: 47.8%;
+  width: 50%;
+  left: 0%;
+  margin-top: -6.5rem;
+  background-color: hsla(0, 0%, 100%, 0.25);
+  /* padding-top: 2rem; */
+  /* padding: 1.5rem 3.3rem; */
+  padding: 3rem 1.5rem 1.5rem;
+  z-index: 11;
+  transition: 0.5s ease all;
+}
+.work-data:hover {
+  z-index: 13;
+  opacity: 1;
+  background: linear-gradient(to bottom right, #0099ff 29%, #ffff00 100%);
+}
+.is-perk {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  transform: translateZ(20px);
+  /* grid-row-gap: 0.5rem;  */
+}
+.text {
+  color: white;
+  text-shadow: 2px 2px 4px rgb(18, 29, 233);
+  z-index: inherit;
+}
+.paragraph {
+  margin-top: 3rem;
+  font-weight: 700;
+}
+.paragraphK {
+  margin-top: 3rem;
+  font-weight: 700;
+}
+.title {
+  margin-left: 7.7rem;
+  margin-top: 0%;
+  font-size: 1.7rem;
+  line-height: 1;
+  font-weight: 900;
+}
+.title_Kashish {
+  margin-left: 3.7rem;
+  margin-top: 0%;
+  font-size: 1.7rem;
+  line-height: 1;
+  font-weight: 900;
+}
+.title1 {
+  margin-left: 6rem;
+  margin-top: 0%;
+  font-size: 1.7rem;
+  line-height: 1;
+  font-weight: 900;
+}
+.title2 {
+  margin-left: 3.2rem;
+  margin-top: 5%;
+  font-size: 1.7rem;
+  line-height: 1;
+  font-weight: 900;
+}
+h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.7rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+a.button1 {
+  box-sizing: border-box;
+  border-radius: 1rem;
+  border: 2px solid hsla(0, 0%, 100%, 0.25);
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+  padding: 5px;
+  transition: 0.2s ease;
+}
+a.button1:hover {
+  background: linear-gradient(to bottom right, #6600ff 18%, #cc9900 100%);
+  font-size: 17px;
+}
+
+.work-avatar {
+  position: absolute;
+  right: auto;
+  top: 8px;
+  left: 6px;
+  bottom: auto;
+  max-width: 94px;
+  border-radius: 100%;
+}
+.work-avatar_kashish {
+  position: absolute;
+  right: auto;
+  top: 5px;
+  left: 6px;
+  bottom: auto;
+  max-width: 95px;
+  height: 90px;
+  width: 117px;
+  border-radius: 100%;
+}
+.work-avatar_raghav {
+  position: absolute;
+  right: auto;
+  top: 8px;
+  left: 8px;
+  bottom: auto;
+  max-width: 91px;
+  border-radius: 100%;
+  height: 86px;
+}
+.work-avatar_VOMI {
+  position: absolute;
+  right: auto;
+  top: 1px;
+  left: 6px;
+  bottom: auto;
+  max-width: 94px;
+  border-radius: 100%;
+}
+.work-avatar_akash {
+  position: absolute;
+  right: auto;
+  top: 5px;
+  left: 8.9px;
+  bottom: auto;
+  max-width: 90px;
+  height: 90px;
+  width: 95px;
+  border-radius: 100%;
+}
+.work-avatar_ekshita {
+  position: absolute;
+  right: auto;
+  top: 3px;
+  left: 14px;
+  bottom: auto;
+  max-width: 95px;
+  height: 90px;
+  border-radius: 100%;
+}
+.work-avatar_devlash {
+  position: absolute;
+  right: auto;
+  top: 5px;
+  left: 7px;
+  bottom: auto;
+  max-width: 92px;
+  height: 90px;
+  width: 95px;
+  border-radius: 100%;
+}
+.outer_circle {
+  position: absolute;
+  right: auto;
+  top: -64px;
+  left: -79px;
+  bottom: auto;
+  max-width: 70px;
+  border-radius: 100%;
+  margin: 50px;
+  width: 67px;
+  height: 59px;
+  border-radius: 50%;
+  background: none;
+}
+
+.inner_circle {
+  background-image: linear-gradient(
+    to bottom,
+    #d1da13,
+    #ffa900,
+    #ff6f3a,
+    #ff2871,
+    #eb00aa,
+    #d216be,
+    #b02bd0,
+    #813ce0,
+    #a138d8,
+    #bb35d0,
+    #d135c7,
+    #e338be
+  );
+  content: "";
+  position: absolute;
+  top: -20px;
+  bottom: -20px;
+  right: -20px;
+  left: -20px;
+  z-index: -1;
+  border-radius: inherit;
+}
+
+/* MEDIA QURIES */
+@media screen and (max-width: 625px) {
+  .work-item {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+  }
+  .work-data {
+    /* align-self: flex-end; */
+    position: relative;
+    top: 0;
+    width: 80%;
+    margin-top: 2rem;
+  }
+  .glass-container {
+    min-height: 278px !important;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 786px) {
+  .work-data {
+    width: 65%;
+  }
+}
+.work-item2 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: clamp(467px, 90%, 1020px);
+  /* width: 958px; */
+  /* width: 90%; */
+  /* flex-basis: 958px; */
+  min-height: 478px;
+  height: auto;
+  justify-content: flex-start;
+  /* align-self: flex-end; */
+  perspective: 745px;
+  margin-bottom: 9%;
+}
+.work-data2 {
+  position: absolute;
+  border: 1px solid hsla(0, 0%, 100%, 0.55);
+  border-radius: 1rem;
+  top: 50%;
+  height: 47.8%;
+  width: 50%;
+  /* left: 0%; */
+  right: 0%;
+  margin-top: -6.5rem;
+  background-color: hsla(0, 0%, 100%, 0.25);
+  padding-top: 1rem;
+  z-index: 11;
+  transition: 0.5s ease all;
+}
+.work-data2:hover {
+  z-index: 13;
+  background: linear-gradient(to bottom right, #0099ff 29%, #ffff00 100%);
+  transition: 3s all eas;
+}
+@media screen and (max-width: 625px) {
+  .work-item2 {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+  }
+  .work-data2 {
+    /* align-self: flex-end; */
+    position: relative;
+    top: 0;
+    width: 80%;
+    margin-top: 2rem;
+  }
+  .glass-container {
+    min-height: 278px !important;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 786px) {
+  .work-data2 {
+    width: 65%;
+  }
+}
+@media screen and (min-width: 806px) and (max-width: 905px) {
+  .outer_circle_2 {
+    top: -64px !important;
+    left: 264px !important;
+  }
+}
+@media screen and (min-width: 790px) and (max-width: 805px) {
+  .outer_circle_2 {
+    top: -64px !important;
+    left: 244px !important;
+  }
+}
+@media screen and (min-width: 679px) and (max-width: 726px) {
+  .outer_circle_2 {
+    top: -64px !important;
+    left: 274px !important;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 679px) {
+  .outer_circle_2 {
+    top: -64px !important;
+    left: 244px !important;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 805px) {
+}
+.outer_circle_2 {
+  position: absolute;
+  right: auto;
+  top: -64px;
+  left: 315px;
+  bottom: auto;
+  max-width: 70px;
+  border-radius: 100%;
+  margin: 50px;
+  width: 67px;
+  height: 59px;
+  border-radius: 50%;
+  background: none;
+}
